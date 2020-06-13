@@ -1,0 +1,76 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+
+/* Course Layout */
+    .courses
+    { 
+        list-style:none;
+    }
+    .courses > li 
+    {
+        position:relative;
+        margin-bottom:30px;
+    }
+    .courses > li .date {
+        display:table-cell;
+        text-align:center;
+        background-color:deepskyblue;
+        color:white;
+        width: 70px;
+        border-radius: 8px;
+    }
+    .courses > li .details {
+        display:table;
+        border:1px solid deepskyblue;
+        width: 300px;
+        height: 40px;
+     }
+    .courses > li .details > span{
+        display:table-cell;
+        text-align:center;
+        vertical-align:middle;
+        color: deepskyblue;
+     }
+
+
+
+/*Date time*/
+/* Bootstrap css */
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+
+/* Google Material icons */
+@import "http://fonts.googleapis.com/icon?family=Material+Icons";
+
+/* Propeller css */
+@import "dist/css/propeller.min.css";
+
+/* Bootstrap datetimepicker */
+@import "datetimepicker/css/bootstrap-datetimepicker.css";
+
+/* Propeller datetimepicker */
+@import "datetimepicker/css/pmd-datetimepicker.css";

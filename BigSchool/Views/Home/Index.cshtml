@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BigSchool.Models.Course>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="row" style="width: 700px; margin: auto;">
+        <h2 class="jumbotron">Upcoming Course</h2>
+        <div class="row">
+            <div class="col-md-12"></div>
+            <table class="table table-bordered" style="width: 700px; margin:auto;">
+                <thead>
+                    <tr>
+                        <td>Month</td>
+                        <td>Day</td>
+                        <td>Category</td>
+                        <td>Lecturer</td>
+                        <td>Manager</td>
+                    </tr>
+                   @foreach (var courses in Model)
+                    {
+                        <tr>
+                            <td>@courses.DateTime.ToString("MM")</td>
+                            <td>@courses.DateTime.ToString("dd")</td>
+                            <td>@courses.Category.Name</td>
+                            <td>@courses.Lecturer.Name</td>
+                            <td>
+                                <button class="btn btn-success btn-detail" style="margin-left: 15px">Detail</button>
+                                <button class="btn btn-info btn-edit" style="margin-left: 15px">Edit</button>
+                                <button class="btn btn-danger btn-delete" style="margin-left: 10px">Delete</button>
+                            </td>
+                        </tr>
+                        }
+            </table>
+        </div>
+    </div>
+<script src="~/Scripts/controll/CourseControll.js"></script>
